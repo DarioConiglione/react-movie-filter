@@ -30,9 +30,11 @@ function App() {
       <select name="" id="">
         <option value="">Tutti</option>
 
-        {movies.map((genre) => (
-          <option value={genre}></option>
-        ))}
+        {
+          movies.map((genre) => (
+            <option value={genre}>[{filteredMovies.genre}]</option>
+          ))
+        }
 
 
 
