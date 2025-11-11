@@ -15,7 +15,6 @@ function App() {
   const [selectedGenre, setSelectedGenre] = useState("");
   const [filteredMovies, setFilteredMovies] = useState(movies);
 
-
   return (
     <>
 
@@ -24,10 +23,21 @@ function App() {
     utilizzare useState per gestire il genere selezionato
     utilizzare useState per cambiare una lista in base alla selezione
     creare una lista che mostra i film
-
-    
-    
     */}
+
+      <h1>LISTA DI FILM</h1>
+
+      <select name="" id="">
+        <option value="">Tutti</option>
+
+        {movies.map((genre) => (
+          <option value={genre}></option>
+        ))}
+
+
+
+
+      </select>
 
 
 
