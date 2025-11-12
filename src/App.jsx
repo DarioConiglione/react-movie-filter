@@ -15,6 +15,14 @@ function App() {
   const [selectedGenre, setSelectedGenre] = useState("");
   const [filteredMovies, setFilteredMovies] = useState(movies);
 
+  useEffect(() => {
+    if (selectedGenre === "") {
+      setFilteredMovies(title)
+    } else if (selectedGenre === option.value) {
+      setFilteredMovies()
+    }
+  }, [selectedGenre])
+
 
 
 
@@ -49,6 +57,8 @@ function App() {
           ))
         }
       </ul>
+
+
 
 
 
