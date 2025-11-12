@@ -15,13 +15,16 @@ function App() {
   const [selectedGenre, setSelectedGenre] = useState("");
   const [filteredMovies, setFilteredMovies] = useState(movies);
 
+
+
+
   return (
     <>
 
       {/*
     creare un campo select dove inserire i generi nelle option
     utilizzare useState per gestire il genere selezionato
-    utilizzare useState per cambiare una lista in base alla selezione
+    utilizzare useeffect per cambiare una lista in base alla selezione
     creare una lista che mostra i film
     */}
 
@@ -32,14 +35,20 @@ function App() {
 
         {
           movies.map((genre) => (
-            <option value={genre}>[{filteredMovies.genre}]</option>
+            <option value={genre}>{movies.genre}</option>
           ))
         }
 
 
-
-
       </select>
+
+      <ul>
+        {
+          movies.map((title) => (
+            <li>{filteredMovies.title}</li>
+          ))
+        }
+      </ul>
 
 
 
